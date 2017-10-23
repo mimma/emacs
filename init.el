@@ -2,6 +2,48 @@
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
 
+(load-theme 'zenburn t)
+
+(require 'package)x
+(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/") t)
+
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+
+(require 'flymake-python-pyflakes)
+(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("melpa" . "http://melpa.org/packages/")
+   t)
+  (package-initialize))
+
+(require 'faces)
+(set-face-attribute 'font-lock-comment-face nil :foreground "lime green")
+
+(require 'package)
+(add-to-list 'package-archives
+             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+
+(package-initialize)
+(elpy-enable)
+(elpy-use-ipython)
+
+(global-unset-key (kbd "C-3"))
+(global-set-key (kbd "C-3") '(lambda() (interactive) (insert-string "#")))
+(global-unset-key (kbd "C-3"))
+(global-set-key (kbd "C-3") '(lambda() (interactive) (insert-string "#")))
+(global-unset-key (kbd "C-3"))
+(global-set-key (kbd "C-3") '(lambda() (interactive) (insert-string "#")))
+
 (let ((minver "23.3"))
   (when (version<= emacs-version "23.1")
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
