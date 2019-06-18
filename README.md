@@ -11,16 +11,12 @@ and Windows.
 Emacs itself comes with support for many programming languages. This
 config adds improved defaults and extended support for the following:
 
-* Ruby / Ruby on Rails
+
 * CSS / LESS / SASS / SCSS
 * HAML / Markdown / Textile / ERB
-* Clojure (with Cider and nRepl)
 * Javascript / Coffeescript
 * Python
 * PHP
-* Haskell
-* Elm
-* Erlang
 * Common Lisp (with Slime)
 
 In particular, there's a nice config for *autocompletion* with
