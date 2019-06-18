@@ -22,7 +22,7 @@ config adds improved defaults and extended support for the following:
 In particular, there's a nice config for *autocompletion* with
 [company](https://company-mode.github.io/), and
 [flycheck](http://www.flycheck.org) is used to immediately highlight
-syntax errors in Ruby, Python, Javascript, Haskell and a number of
+syntax errors in Python, Javascript, PHP and a number of
 other languages.
 
 ## Supported Emacs versions
@@ -33,16 +33,13 @@ above is required for an increasing number of key packages, including
 `magit`, `company` and `flycheck`, so to get full you should use the
 latest Emacs version available to you.
 
-Some Windows users might need to follow
-[these instructions](http://xn--9dbdkw.se/diary/how_to_enable_GnuTLS_for_Emacs_24_on_Windows/index.en.html)
-to get TLS (ie. SSL) support included in their Emacs.
 
 ## Other requirements
 
 To make the most of the programming language-specific support in this
 config, further programs will likely be required, particularly those
 that [flycheck](https://github.com/flycheck/flycheck) uses to provide
-on-the-fly syntax checking.
+on-the-fly syntax checking and NeoTree
 
 ## Installation
 
